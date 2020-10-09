@@ -1,0 +1,21 @@
+clear_alloc_shm.sh				清除ccd，mcd，dcc使用的共享内存传输使用的共享内存和信号量
+clear_mq.sh						清除ccd，mcd，dcc使用的共享内存管道使用的共享内存和信号量
+start.sh						启动服务器，自动判断是否启用了watchdog功能，包括ccd，mcd，dcc
+stop.sh							停止服务器，自动判断是否启用了watchdog功能，包括ccd，mcd，dcc
+restart.sh						重启服务器
+start_ccd.sh					独立启动ccd
+start_dcc.sh					独立启动dcc
+start_mcd.sh					独立启动mcd
+start_watchdog.sh				启动watchdog，一般会启动被watchdog监控的ccd，mcd，dcc
+stop_ccd.sh						独立停止ccd
+stop_dcc.sh						独立停止dcc
+stop_mcd.sh						独立停止mcd
+stop_watchdog.sh				停止watchdong，一般会先停止被watchdog监控的ccd，mcd，dcc
+force_stop.sh					强制停止服务器所有进程（使用kill -9信号）
+reload_mcd.sh					发送SIGUSR1信号给mcd进程，这个信号业务一般用做配置重新读取使用
+p.sh							查看服务器所有进程
+check.sh						监控服务器所有进程，自动检查是否启用了watchdog进程
+check_ccd.sh					监控ccd进程
+check_dcc.sh					监控dcc进程
+check_mcd.sh					监控mcd进程
+check_watchdog.sh				监控watchdog进程（当启用watchdog的时候只监控watchdog进程就够了）
